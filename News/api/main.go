@@ -17,5 +17,7 @@ func init() {
 
 func main() {
 
+	http.HandleFunc("/news", GetNews)
+
 	http.ListenAndServe(":8081", nil)
 }
