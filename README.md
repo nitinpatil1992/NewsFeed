@@ -1,5 +1,5 @@
 # Overview
-Simple news search react-redux application with golang as bakend API
+Simple news search react-redux application with golang as bakend API using Google API
 
 # Demo
 ![Screenshot of app](https://github.com/nitinpatil1992/NewsFeed/blob/master/News/img/demo.png)
