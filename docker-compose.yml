@@ -1,0 +1,27 @@
+version: '3'
+services:
+  news-api:
+    build:
+      context: ./News/api
+    environment:
+    - env=dev
+    ports:
+      - 8081:8081
+    networks:
+      - localnews
+
+  news-front:
+    build:
+      context: ./News/frontend
+    environment:
+    - REACT_APP_API_HOST=news-api:8081
+    depends_on:
+      - news-api
+    ports:
+      - 8080:80
+    networks:
+      - localnews
+
+networks:
+  localnews:
+    
